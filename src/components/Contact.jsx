@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { useTranslation } from '../hooks/useTranslation'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -6,6 +7,8 @@ const Contact = () => {
     email: '',
     message: ''
   })
+
+  const { t } = useTranslation()
 
   const handleSubmit = (e) => {
     e.preventDefault()
@@ -28,17 +31,23 @@ const Contact = () => {
       <div className="container">
         <div className="w-full px-4">
           <div className="contact-title max-w-xl mx-auto text-center">
-            <h4 className="font-semibold font-lg text-black mb-2">Contact</h4>
-            <h2 className="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">Contact Us:</h2>
+            <h4 className="font-semibold font-lg text-black mb-2">
+              {t('contact.title')}
+            </h4>
+            <h2 className="font-bold text-dark text-3xl mb-4 sm:text-4xl lg:text-5xl">
+              {t('contact.subtitle')}
+            </h2>
             <p className="text-md font-medium text-secondary md:text-lg mb-4">
-              Kalian dapat menghubungi saya dengan mengisi form dibawah:
+              {t('contact.description')}
             </p>
           </div>
         </div>
         <form onSubmit={handleSubmit}>
           <div className="contact-form w-full lg:w-2/3 lg:mx-auto">
             <div className="w-full px-4 mb-8">
-              <label htmlFor="name" className="text-base text-black font-bold">Name</label>
+              <label htmlFor="name" className="text-base text-black font-bold">
+                {t('contact.name')}
+              </label>
               <input 
                 type="text" 
                 id="name" 
@@ -47,11 +56,13 @@ const Contact = () => {
                 onChange={handleChange}
                 className="form-input w-full bg-slate-200 text-dark p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                 required
-                placeholder="Masukkan nama lengkap"
+                placeholder={t('contact.namePlaceholder')}
               />
             </div>
             <div className="w-full px-4 mb-8">
-              <label htmlFor="email" className="text-base text-black font-bold">Email</label>
+              <label htmlFor="email" className="text-base text-black font-bold">
+                {t('contact.email')}
+              </label>
               <input 
                 type="email" 
                 id="email" 
@@ -60,11 +71,13 @@ const Contact = () => {
                 onChange={handleChange}
                 className="form-input w-full bg-slate-200 text-dark p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                 required
-                placeholder="Masukkan alamat email"
+                placeholder={t('contact.emailPlaceholder')}
               />
             </div>
             <div className="w-full px-4 mb-8">
-              <label htmlFor="message" className="text-base text-black font-bold">Message</label>
+              <label htmlFor="message" className="text-base text-black font-bold">
+                {t('contact.message')}
+              </label>
               <textarea 
                 id="message" 
                 name="message"
@@ -72,7 +85,7 @@ const Contact = () => {
                 onChange={handleChange}
                 className="form-input w-full bg-slate-200 text-dark p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 h-32 resize-none"
                 required
-                placeholder="Tulis pesan Anda di sini..."
+                placeholder={t('contact.messagePlaceholder')}
               ></textarea>
             </div>
             <div className="w-full px-4">
@@ -80,7 +93,7 @@ const Contact = () => {
                 type="submit"
                 className="btn-primary text-base text-white font-semibold bg-dark py-4 px-8 rounded-full w-full hover:opacity-90 transition-all duration-300"
               >
-                Kirim Pesan
+                {t('contact.send')}
               </button>
             </div>
           </div>

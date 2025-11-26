@@ -1,10 +1,14 @@
 import React, { useState, useEffect } from 'react'
 import { useTheme } from '../context/ThemeContext'
+import { useLanguage } from '../context/LanguageContext'
+import { useTranslation } from '../hooks/useTranslation'
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
   const [isScrolled, setIsScrolled] = useState(false)
   const { theme, toggleTheme } = useTheme()
+  const { toggleLanguage, isIndonesian } = useLanguage()
+  const { t } = useTranslation()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -20,10 +24,11 @@ const Navbar = () => {
   }
 
   const navItems = [
-    { href: '#home', label: 'Beranda' },
-    { href: '#about', label: 'About Me' },
-    { href: '#portfolio', label: 'Portfolio' },
-    { href: '#skills', label: 'Skills' },
+    { href: '#home', label: t('nav.home') },
+    { href: '#about', label: t('nav.about') },
+    { href: '#portfolio', label: t('nav.portfolio') },
+    { href: '#skills', label: t('nav.skills') },
+    { href: '#contact', label: t('nav.contact') },
   ]
 
   const getThemeIcon = () => {
@@ -53,6 +58,14 @@ const Navbar = () => {
           </div>
           
           <div className="flex items-center px-4 space-x-4">
+            {/* Language Toggle */}
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center space-x-2 px-3 py-2 rounded-lg border border-gray-300 dark:border-gray-600 hover:bg-gray-100 dark:hover:bg-gray-800 theme-transition text-sm font-medium"
+            >
+              <span>{isIndonesian ? 'ID' : 'EN'}</span>
+            </button>
+
             {/* Theme Toggle */}
             <div className="flex items-center space-x-2">
               <span className="text-sm theme-transition" style={{ width: '20px', textAlign: 'center' }}>

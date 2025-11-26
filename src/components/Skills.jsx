@@ -9,8 +9,11 @@ import lumen from '../assets/img/lumen.png'
 import react from '../assets/img/react.png'
 import flutter from '../assets/img/flutter.png'
 import firebase from '../assets/img/firebase.png'
+import { useTranslation } from '../hooks/useTranslation'
 
 const Skills = () => {
+  const { t } = useTranslation()
+
   const skills = [
     { name: "HTML5", icon: html5 },
     { name: "CSS3", icon: css3 },
@@ -31,10 +34,10 @@ const Skills = () => {
         <div className="w-full px-4">
           <div className="max-w-xl mx-auto text-center">
             <h2 className="skills-title font-bold text-3xl mb-4 sm:text-4xl lg:text-5xl theme-transition">
-              My Skills
+              {t('skills.title')}
             </h2>
             <p className="text-md font-medium md:text-lg theme-transition">
-              Berikut adalah teknologi-teknologi yang aku kuasai
+              {t('skills.description')}
             </p>
           </div>
         </div>

@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "skills": "Skills",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Assalamualaikum, my name is",
+    "title": "Front End Web Developer",
+    "subtitle": "Creating exceptional digital experiences",
+    "downloadCV": "Download CV",
+    "viewWork": "View My Work",
+    "description": "Passionate Frontend Developer specializing in React.js, Laravel, and Flutter. Creating beautiful and functional web applications with modern technologies.",
+    "stats": {
+      "experience": "Years Experience",
+      "projects": "Projects Completed",
+      "clients": "Happy Clients"
+    },
+    "scroll": "Scroll Down"
+  },
+  "about": {
+    "title": "About Me",
+    "description": "Hello, my name is Zacky Keisya Akbar, usually called Zaki. I am a student in Software and Game Development (PPLG) at SMK Wikrama Bogor, West Java",
+    "followMe": "Follow me on:",
+    "socialDescription": "To see my daily activities or other works, you can check out my social media by clicking the buttons below"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "My Work",
+    "description": "Here is a list of my projects & certificates so far.",
+    "projects": "Projects",
+    "certificates": "Certificates",
+    "techStack": "Tech Stack:",
+    "features": "Main Features:",
+    "demo": "Demo Link:",
+    "viewDemo": "View Demo",
+    "demoNotAvailable": "Demo not available",
+    "documentation": "Documentation:",
+    "images": "Project Images:",
+    "projectDetails": {
+      "ecommerce": {
+        "title": "E-Commerce Website",
+        "subtitle": "Complete online shopping platform with full features",
+        "description": "E-commerce website with product catalog, shopping cart, payment, and admin dashboard features. (created in 10th grade)",
+        "features": [
+          "Static product catalog",
+          "Shopping cart",
+          "Online payment",
+          "Admin dashboard"
+        ]
+      },
+      "student": {
+        "title": "Student Data Management",
+        "subtitle": "School student data management system",
+        "description": "Application to manage student data, attendance, grades, and reports. (created in 10th grade)",
+        "features": [
+          "Student data management",
+          "Online attendance",
+          "Report printing"
+        ]
+      },
+      "pos": {
+        "title": "Weather Detector App",
+        "subtitle": "ReactJS weather detection application",
+        "description": "ReactJS application to detect weather in a city using public API from OpenWeatherMap. (created in 11th grade)",
+        "features": [
+          "Search weather by city name",
+          "Display temperature, conditions, and weather icons",
+          "Using OpenWeatherMap API"
+        ]
+      },
+      "perpus": {
+        "title": "Digital Library",
+        "subtitle": "Digital library application",
+        "description": "Digital library application built using React and consuming data from external API for book lists, details, and borrowing. (created in 11th grade)",
+        "features": [
+          "Display book list from API",
+          "Dynamic book details",
+          "Book borrowing and return",
+          "Real-time book search"
+        ]
+      },
+      "pharmacy": {
+        "title": "Pharmacy System",
+        "subtitle": "Pharmacy and medicine management system",
+        "description": "Application to manage drug stock, prescriptions, and transactions in pharmacy. (created in 10th grade)",
+        "features": [
+          "Drug stock management",
+          "Sales transactions",
+          "Prescription printing"
+        ]
+      },
+      "complaint": {
+        "title": "Public Complaint System",
+        "subtitle": "Public complaint platform",
+        "description": "Application to receive and follow up on public complaints. (created in 11th grade)",
+        "features": [
+          "Online complaint form",
+          "Complaint status tracking",
+          "Email notifications"
+        ]
+      },
+      "ticket": {
+        "title": "Ticketing App",
+        "subtitle": "Online ticket management application",
+        "description": "Mobile application for purchasing and managing event tickets, built using Flutter and Firebase. (created in 11th grade)",
+        "features": [
+          "User registration and login",
+          "Event ticket search and purchase",
+          "QR Code for ticket validation",
+          "Purchase notifications",
+          "Digital payment integration"
+        ]
+      }
+    },
+    "certificateDetails": {
+      "frontend": "Front-End Web Development",
+      "uxDesign": "UX Design Fundamentals",
+      "react": "React Beginner to Advanced"
+    }
+  },
+  "skills": {
+    "title": "My Skills",
+    "description": "Here are the technologies I master"
+  },
+  "contact": {
+    "title": "Contact",
+    "subtitle": "Contact Us:",
+    "description": "You can contact me by filling out the form below:",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "namePlaceholder": "Enter your full name",
+    "emailPlaceholder": "Enter your email address",
+    "messagePlaceholder": "Write your message here...",
+    "send": "Send Message"
+  },
+  "footer": {
+    "contactUs": "Contact Us",
+    "address": "Jl. Mayjen H.E Sukma Rt 03/10",
+    "city": "Bogor West Java",
+    "links": "Links",
+    "madeBy": "Made by:",
+    "rights": "All Rights Reserved."
+  }
+}

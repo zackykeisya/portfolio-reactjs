@@ -1,0 +1,148 @@
+{
+  "nav": {
+    "home": "Beranda",
+    "about": "Tentang",
+    "portfolio": "Portfolio",
+    "skills": "Keahlian",
+    "contact": "Kontak"
+  },
+  "hero": {
+    "greeting": "Assalamualaikum, nama saya",
+    "title": "Front End Web Developer",
+    "subtitle": "Membuat pengalaman digital yang luar biasa",
+    "downloadCV": "Download CV",
+    "viewWork": "Lihat Karya Saya",
+    "description": "Pengembang Frontend yang bersemangat dengan spesialisasi di React.js, Laravel, dan Flutter. Menciptakan aplikasi web yang indah dan fungsional dengan teknologi modern.",
+    "stats": {
+      "experience": "Tahun Pengalaman",
+      "projects": "Proyek Selesai",
+      "clients": "Klien Puas"
+    },
+    "scroll": "Scroll Down"
+  },
+  "about": {
+    "title": "Tentang Saya",
+    "description": "Halo, nama saya Zacky Keisya Akbar biasa dipanggil Zaki. Saya adalah siswa jurusan Pengembangan Perangkat Lunak dan GIM (PPLG) di SMK Wikrama Bogor Jawa Barat",
+    "followMe": "Ikuti saya di:",
+    "socialDescription": "Untuk mengetahui keseharianku atau karya-karya lain bisa kalian lihat di sosial media saya yang bisa kalian kunjungi dengan menekan tombol dibawah"
+  },
+  "portfolio": {
+    "title": "Portfolio",
+    "subtitle": "Karya Saya",
+    "description": "Berikut adalah daftar project & sertifikat saya selama ini.",
+    "projects": "Project",
+    "certificates": "Sertifikat",
+    "techStack": "Tech Stack:",
+    "features": "Fitur Utama:",
+    "demo": "Link Demo:",
+    "viewDemo": "Lihat Demo",
+    "demoNotAvailable": "Demo tidak tersedia",
+    "documentation": "Dokumentasi:",
+    "images": "Gambar Project:",
+    "projectDetails": {
+      "ecommerce": {
+        "title": "Website E-Commerce",
+        "subtitle": "Platform jual beli online dengan fitur lengkap",
+        "description": "Website e-commerce dengan fitur katalog produk, keranjang belanja, pembayaran, dan dashboard admin. (dibuat saat kelas 10)",
+        "features": [
+          "Katalog produk masih statis",
+          "Keranjang belanja",
+          "Pembayaran online",
+          "Dashboard admin"
+        ]
+      },
+      "student": {
+        "title": "Manajemen Data Siswa",
+        "subtitle": "Sistem manajemen data siswa sekolah",
+        "description": "Aplikasi untuk mengelola data siswa, absensi, nilai, dan laporan. (dibuat saat kelas 10)",
+        "features": [
+          "Manajemen data siswa",
+          "Absensi online",
+          "Cetak laporan"
+        ]
+      },
+      "pos": {
+        "title": "Aplikasi Pendeteksi Cuaca",
+        "subtitle": "Aplikasi ReactJS pendeteksi cuaca",
+        "description": "Aplikasi ReactJS untuk mendeteksi cuaca suatu kota menggunakan public API dari OpenWeatherMap. (dibuat saat kelas 11)",
+        "features": [
+          "Cari cuaca berdasarkan nama kota",
+          "Menampilkan suhu, kondisi, dan icon cuaca",
+          "Menggunakan API OpenWeatherMap"
+        ]
+      },
+      "perpus": {
+        "title": "Perpustakaan Digital",
+        "subtitle": "Aplikasi perpustakaan digital",
+        "description": "Aplikasi perpustakaan digital yang dibuat menggunakan React dan mengonsumsi data dari API eksternal untuk daftar buku, detail, dan peminjaman. (dibuat saat kelas 11)",
+        "features": [
+          "Menampilkan daftar buku dari API",
+          "Detail buku dinamis",
+          "Peminjaman dan pengembalian buku",
+          "Pencarian buku real-time"
+        ]
+      },
+      "pharmacy": {
+        "title": "Sistem Apotek",
+        "subtitle": "Sistem manajemen apotek dan obat-obatan",
+        "description": "Aplikasi untuk mengelola stok obat, resep, dan transaksi di apotek. (dibuat saat kelas 10)",
+        "features": [
+          "Manajemen stok obat",
+          "Transaksi penjualan",
+          "Cetak resep"
+        ]
+      },
+      "complaint": {
+        "title": "Sistem Pengaduan Masyarakat",
+        "subtitle": "Platform pengaduan masyarakat",
+        "description": "Aplikasi untuk menerima dan menindaklanjuti pengaduan masyarakat. (dibuat saat kelas 11)",
+        "features": [
+          "Form pengaduan online",
+          "Tracking status pengaduan",
+          "Notifikasi email"
+        ]
+      },
+      "ticket": {
+        "title": "Aplikasi Tiket",
+        "subtitle": "Aplikasi manajemen tiket online",
+        "description": "Aplikasi mobile untuk pembelian dan manajemen tiket event, dibangun menggunakan Flutter dan Firebase. (dibuat saat kelas 11)",
+        "features": [
+          "Pendaftaran dan login pengguna",
+          "Pencarian dan pembelian tiket event",
+          "QR Code untuk validasi tiket",
+          "Notifikasi pembelian",
+          "Integrasi pembayaran digital"
+        ]
+      }
+    },
+    "certificateDetails": {
+      "frontend": "Pengembangan Web Front-End",
+      "uxDesign": "Fundamental Desain UX",
+      "react": "React Pemula hingga Mahir"
+    }
+  },
+  "skills": {
+    "title": "Keahlian Saya",
+    "description": "Berikut adalah teknologi-teknologi yang saya kuasai"
+  },
+  "contact": {
+    "title": "Kontak",
+    "subtitle": "Hubungi Kami:",
+    "description": "Kalian dapat menghubungi saya dengan mengisi form dibawah:",
+    "name": "Nama",
+    "email": "Email",
+    "message": "Pesan",
+    "namePlaceholder": "Masukkan nama lengkap",
+    "emailPlaceholder": "Masukkan alamat email",
+    "messagePlaceholder": "Tulis pesan Anda di sini...",
+    "send": "Kirim Pesan"
+  },
+  "footer": {
+    "contactUs": "Hubungi Kami",
+    "address": "Jl. Mayjen H.E Sukma Rt 03/10",
+    "city": "Bogor Jawa Barat",
+    "links": "Tautan",
+    "madeBy": "Dibuat oleh:",
+    "rights": "Hak Cipta Dilindungi."
+  }
+}

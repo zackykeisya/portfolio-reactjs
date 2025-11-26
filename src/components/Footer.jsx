@@ -1,6 +1,9 @@
 import React from 'react'
+import { useTranslation } from '../hooks/useTranslation'
 
 const Footer = () => {
+  const { t } = useTranslation()
+
   const socialLinks = [
     {
       name: 'Instagram',
@@ -32,11 +35,11 @@ const Footer = () => {
   ]
 
   const footerLinks = [
-    { href: '#home', label: 'Beranda' },
-    { href: '#about', label: 'About Me' },
-    { href: '#portfolio', label: 'PortFolio' },
-    { href: '#skills', label: 'Skills' },
-    { href: '#contact', label: 'Contact' },
+    { href: '#home', label: t('nav.home') },
+    { href: '#about', label: t('nav.about') },
+    { href: '#portfolio', label: t('nav.portfolio') },
+    { href: '#skills', label: t('nav.skills') },
+    { href: '#contact', label: t('nav.contact') },
   ]
 
   return (
@@ -45,17 +48,17 @@ const Footer = () => {
         <div className="flex flex-wrap justify-center">
           <div className="w-full px-4 mb-12 text-slate-300 font-medium md:w-1/2 md:mx-auto">
             <h2 className="font-bold text-4xl text-white mb-5">Zacky Keisya</h2>
-            <h3 className="font-bold text-2xl mb-2">Contact Us</h3>
+            <h3 className="font-bold text-2xl mb-2">{t('footer.contactUs')}</h3>
             <p>
               <a href="mailto:zackykeisyaa@gmail.com" className="hover:text-primary transition duration-300">
                 zackykeisyaa@gmail.com
               </a>
             </p>
-            <p>Jl. Mayjen H.E Sukma Rt 03/10</p>
-            <p>Bogor Jawa barat</p>
+            <p>{t('footer.address')}</p>
+            <p>{t('footer.city')}</p>
           </div>
           <div className="w-full px-4 mb-12 md:w-1/2 md:mx-auto">
-            <h3 className="font-semibold text-xl text-white mb-5">Link</h3>
+            <h3 className="font-semibold text-xl text-white mb-5">{t('footer.links')}</h3>
             <ul className="text-slate-300">
               {footerLinks.map((link, index) => (
                 <li key={index}>
@@ -85,7 +88,7 @@ const Footer = () => {
             ))}
           </div>
           <p className="font-medium text-sm text-slate-200 text-center">
-            Made by: <span className="text-pink-500"></span>{' '}
+            {t('footer.madeBy')}{' '}
             <a 
               target="_blank" 
               rel="noopener noreferrer"

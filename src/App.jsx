@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { useTheme } from './context/ThemeContext'
+import { LanguageProvider } from './context/LanguageContext'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import About from './components/About'
@@ -8,7 +9,7 @@ import Skills from './components/Skills'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
 
-function App() {
+function AppContent() {
   const [isLoading, setIsLoading] = useState(true)
   const { theme } = useTheme()
 
@@ -108,6 +109,14 @@ function App() {
       <Contact />
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <AppContent />
+    </LanguageProvider>
   )
 }
 
