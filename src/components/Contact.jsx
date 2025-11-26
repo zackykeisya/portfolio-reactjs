@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { useTranslation } from '../hooks/useTranslation'
+import emailjs from '@emailjs/browser'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -7,16 +8,58 @@ const Contact = () => {
     email: '',
     message: ''
   })
+  
+  const [isLoading, setIsLoading] = useState(false)
+  const [submitStatus, setSubmitStatus] = useState(null) // 'success' or 'error'
 
   const { t } = useTranslation()
 
-  const handleSubmit = (e) => {
+  // EmailJS configuration - ganti dengan data Anda dari dashboard EmailJS
+  const EMAILJS_CONFIG = {
+    SERVICE_ID: 'service_8feo0tj',
+    TEMPLATE_ID: 'template_hy89cyj',
+    PUBLIC_KEY: 'p5bS7e9JC0pHBvY4K'
+  }
+
+  const handleSubmit = async (e) => {
     e.preventDefault()
-    // Handle form submission here
-    console.log('Form data:', formData)
-    
-    // You can add your form submission logic here
-    // For example, send to an API or email service
+    setIsLoading(true)
+    setSubmitStatus(null)
+
+    try {
+      // Prepare template parameters for EmailJS
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        message: formData.message,
+        to_email: 'zackykeisyaa@gmail.com',
+        reply_to: formData.email
+      }
+
+      // Send email using EmailJS
+      const result = await emailjs.send(
+        EMAILJS_CONFIG.SERVICE_ID,
+        EMAILJS_CONFIG.TEMPLATE_ID,
+        templateParams,
+        EMAILJS_CONFIG.PUBLIC_KEY
+      )
+
+      console.log('Email sent successfully:', result)
+      setSubmitStatus('success')
+      
+      // Reset form
+      setFormData({
+        name: '',
+        email: '',
+        message: ''
+      })
+
+    } catch (error) {
+      console.error('Failed to send email:', error)
+      setSubmitStatus('error')
+    } finally {
+      setIsLoading(false)
+    }
   }
 
   const handleChange = (e) => {
@@ -42,6 +85,24 @@ const Contact = () => {
             </p>
           </div>
         </div>
+
+        {/* Status Messages */}
+        {submitStatus === 'success' && (
+          <div className="w-full lg:w-2/3 lg:mx-auto mb-6 px-4">
+            <div className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded-lg">
+              {t('contact.successMessage')}
+            </div>
+          </div>
+        )}
+
+        {submitStatus === 'error' && (
+          <div className="w-full lg:w-2/3 lg:mx-auto mb-6 px-4">
+            <div className="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded-lg">
+              {t('contact.errorMessage')}
+            </div>
+          </div>
+        )}
+
         <form onSubmit={handleSubmit}>
           <div className="contact-form w-full lg:w-2/3 lg:mx-auto">
             <div className="w-full px-4 mb-8">
@@ -57,6 +118,7 @@ const Contact = () => {
                 className="form-input w-full bg-slate-200 text-dark p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                 required
                 placeholder={t('contact.namePlaceholder')}
+                disabled={isLoading}
               />
             </div>
             <div className="w-full px-4 mb-8">
@@ -72,6 +134,7 @@ const Contact = () => {
                 className="form-input w-full bg-slate-200 text-dark p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300"
                 required
                 placeholder={t('contact.emailPlaceholder')}
+                disabled={isLoading}
               />
             </div>
             <div className="w-full px-4 mb-8">
@@ -86,14 +149,20 @@ const Contact = () => {
                 className="form-input w-full bg-slate-200 text-dark p-4 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary focus:border-primary transition-all duration-300 h-32 resize-none"
                 required
                 placeholder={t('contact.messagePlaceholder')}
+                disabled={isLoading}
               ></textarea>
             </div>
             <div className="w-full px-4">
               <button 
                 type="submit"
-                className="btn-primary text-base text-white font-semibold bg-dark py-4 px-8 rounded-full w-full hover:opacity-90 transition-all duration-300"
+                disabled={isLoading}
+                className={`btn-primary text-base text-white font-semibold py-4 px-8 rounded-full w-full transition-all duration-300 ${
+                  isLoading 
+                    ? 'bg-gray-400 cursor-not-allowed' 
+                    : 'bg-dark hover:opacity-90'
+                }`}
               >
-                {t('contact.send')}
+                {isLoading ? t('contact.sending') : t('contact.send')}
               </button>
             </div>
           </div>
